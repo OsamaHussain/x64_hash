@@ -2,7 +2,7 @@
 // GitHub:    https://github.com/OsamaHussain
 
 // One-Way Hashing Algorithm x64_hash That Uses Simple Method to Hash Data
-function x64_hash(input) {
+const x64_hash = (input) => {
   let hash = 0n;
   for (let i = 0; i < input.length; i++) {
     const charCode = BigInt(input.charCodeAt(i));
@@ -11,7 +11,7 @@ function x64_hash(input) {
   }
   const hashString = hash.toString(16).padStart(16, "0");
   return hashString;
-}
+};
 
 // Result
 const result = x64_hash("My_Password_123");
